@@ -77,7 +77,7 @@ ideas that have come before but aren't really essential are marked with a
 plus, and problems that are essential if you want to cover the section they
 are in or, perhaps, the next section.  If a problem is relevant to a much
 later section in an essential way, I've marked it with a dot and a
-parenthetical not e that explains where it will be essential.  Finally,
+parenthetical note that explains where it will be essential.  Finally,
 problems that seem unusually hard to me are marked with an asterisk. Some
 I've marked as hard only because I think they are difficult in light of what
 has come before, not because they are intrinsically difficult.  In particular,
@@ -194,3 +194,16 @@ are responsible for the overall design and most of the problems in
 the appendix on exponential generating functions.  I believe the
 board has managed both to make the book more accessible and more
 interesting.
+
+\vfill
+
+Summary of problem decorations:
+\begin{enumerate}
+\itemm Motivational or introductory
+\iteme Essential idea developed
+\items Summarizing previous material
+\itemh Hard (at the current place in the material)
+\itemi Important; particularly interesting
+\itemes Essential much later
+\itemesi Essential much later; important
+\end{enumerate}
