@@ -1,5 +1,13 @@
-
 \documentclass[12 pt]{book}
+
+\newif\ifinstructor
+
+%% uncomment one of the following, depending if you want to include the
+%% instructor notes and solutions or not
+\instructortrue
+\instructorfalse
+
+
 
 \usepackage{epsfig}
 \usepackage{makeidx}
@@ -18,36 +26,50 @@
 \newtheorem{theorem}{Theorem}
 \newtheorem{corollary}{Corollary}
 \newcommand{\tallstrut}[1]{\vrule height #1pt width 0 pt}
+
+\ifinstructor
 \newcommand{\solution}[1]{\par\noindent {\bf
 Solution:}\quad #1~\rule{3pt}{9pt}}
-%\newcommand{\solution}[1]{}
+\else
+\newcommand{\solution}[1]{}
+\fi
+
 \newcommand{\cycle}[1]{\arraycolsep 5 pt
 \left(\begin{array}#1\end{array}\right)}
 
+% graphic arrow for importance
+\newcommand{\importantarrow}{\psfig{figure=arrow.eps}}
+
+% Motivational or introductory
+\newcommand{\itemm}{\refstepcounter{enumi}
+\item[\hspace*{-7pt}$\circ$\hspace*{1pt}\theenumi.]}
+
+%essential
 \newcommand{\iteme}{\refstepcounter{enumi}
 \item[\hspace*{-7pt}$\bullet$\hspace*{1pt}\theenumi.]}
 
+% summarizing ideas
 \newcommand{\items}{\refstepcounter{enumi}
 \item[\hspace*{-7pt}\raisebox{2pt}{\tiny$+$}\hspace*{2pt}\theenumi.]}
 
+%hard (at the current place in the material)
 \newcommand{\itemh}{\refstepcounter{enumi}
 \item[\hspace*{-7pt}{$*$}\hspace*{1pt}\theenumi.]}
 
+% essential much later
 \newcommand{\itemes}{\refstepcounter{enumi}
 \item[\hspace*{-7pt}\raisebox{-1pt}{\Large$\cdot$}\hspace*{1pt}\theenumi.]}
 
+% essential much later, important
 \newcommand{\itemesi}{\refstepcounter{enumi}
  \item[\hspace*{-19pt}\importantarrow\hspace*{1pt}\raisebox{-1pt}{\Large
 $\cdot$}\hspace*{1pt}\theenumi.]}
 
-\newcommand{\itemm}{\refstepcounter{enumi}
-\item[\hspace*{-7pt}$\circ$\hspace*{1pt}\theenumi.]}
-
-\newcommand{\importantarrow}{\psfig{figure=arrow.eps}}
-
+%important
 \newcommand{\itemi}{\refstepcounter{enumi}
 \item[\hspace*{-11pt}\importantarrow\hspace*{1pt}\theenumi.]}
 
+%important subitem
 \newcommand{\itemitemi}{\refstepcounter{enumii}
 \item[\hspace*{-11pt}\importantarrow\hspace*{1pt}(\theenumii)]}
 
@@ -89,7 +111,11 @@ $\cdot$}\hspace*{1pt}\theenumi.]}
 \newcommand{\pe}{\pear} 
 
 \title{Combinatorics Through Guided
-  Discovery: Drake Version} 
+  Discovery: Drake Version
+\ifinstructor
+\\\bigskip
+Instructor Edition
+\fi} 
 \author{Kenneth P. Bogart \\
   Jason Grout (minor modifications)}
 \date{Typeset on \today\\
