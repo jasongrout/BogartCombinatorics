@@ -3,7 +3,9 @@
 
 \usepackage{epsfig}
 \usepackage{makeidx}
+\usepackage[totoc]{idxlayout}
 \usepackage{hyperref}
+\usepackage{microtype}
 %\setlength{\topmargin}{0in}
 %\setlength{\oddsidemargin}{0in}
 %\setlength{\evensidemargin}{0in}
@@ -16,9 +18,9 @@
 \newtheorem{theorem}{Theorem}
 \newtheorem{corollary}{Corollary}
 \newcommand{\tallstrut}[1]{\vrule height #1pt width 0 pt}
-%\newcommand{\solution}[1]{\par\noindent {\bf
-%Solution:}\quad #1~\rule{3pt}{9pt}}
-\newcommand{\solution}[1]{}
+\newcommand{\solution}[1]{\par\noindent {\bf
+Solution:}\quad #1~\rule{3pt}{9pt}}
+%\newcommand{\solution}[1]{}
 \newcommand{\cycle}[1]{\arraycolsep 5 pt
 \left(\begin{array}#1\end{array}\right)}
 
@@ -84,12 +86,15 @@ $\cdot$}\hspace*{1pt}\theenumi.]}
 \newcommand\banana{\mbox{\psfig{figure=Banana.eps,height=10 pt}}}
 \newcommand{\ba}{\banana}
 \newcommand\pear{\mbox{\psfig{figure=Pear.eps,height=10 pt}}}
-\newcommand{\pe}{\pear}
-\title{Combinatorics Through Guided Discovery\thanks{Development of this 
-project was supported by National Science Foundation Grant Number
-DUE-0087466}}
-\author{Kenneth P. Bogart}
-%\date{}
+\newcommand{\pe}{\pear} 
+
+\title{Combinatorics Through Guided
+  Discovery: Drake Version} 
+\author{Kenneth P. Bogart \\
+  Jason Grout (minor modifications)}
+\date{Typeset on \today\\
+  \vfill \normalsize Development of the original version of this document was
+  supported by National Science Foundation Grant Number DUE-0087466}
 
 %\includeonly{Chapter5}
 %\includeonly{AppendixRelations}
@@ -101,14 +106,15 @@ DUE-0087466}}
 \maketitle
 %\vspace*{\fill}\copyright Kenneth P. Bogart, 2002
 \vspace*{\fill}
-Copyright (c) 2004 Kenneth P. Bogart.  
+\noindent Copyright  \copyright{} 2004 Kenneth P. Bogart.  \\
+Copyright  \copyright{} 2012 Jason Grout.
 
-Permission is granted to copy, distribute and/or modify the contents
-of this archive under the terms of the GNU Free Documentation License,
+\noindent Permission is granted to copy, distribute and/or modify the contents
+of this document under the terms of the GNU Free Documentation License,
 Version 1.3 or any later version published by the Free Software
 Foundation; with no Invariant Sections, no Front-Cover Texts, and no
-Back-Cover Texts.  A copy of the license is included in the
-LICENSE.txt file in the top level of this archive.
+Back-Cover Texts.  A copy of the license is included in the section
+entitled ``GNU Free Documentation License''.
 
 \tableofcontents
 
@@ -122,10 +128,12 @@ LICENSE.txt file in the top level of this archive.
 \include{Chapter4}
 \include{Chapter5} 
 
-
 \include{AppendixRelations}
 \include{AppendixInduction}
 \include{AppendixExponentialGenFun}
+\include{History}
+\include{LICENSE}
+
 \backmatter
 \printindex
 \end{document} 
